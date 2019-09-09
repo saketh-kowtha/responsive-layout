@@ -172,18 +172,19 @@
 				ele.className = ele.className.replace("stickyNav","")
 			}
 		})
-		let imgIndex = 0	
+
 		window.onload = function(){
+			let imgIndex = 0	
 			let imgList = ['phone.jpeg', 'web.jpeg', 'web1.png', 'web2.png']
 			setInterval(function(){
+				
 				document.getElementById('img').src='../images/' + imgList[imgIndex]
 				imgIndex++
 				if(imgIndex > 3)
 					imgIndex = 0
-
+				
 			}, 3000)
 			document.querySelectorAll('nav ul li').forEach(function(e){
-				console.log(e)
 				e.onclick = function(){
 					scroll_to_div(this.getAttribute('to'))
 				}
